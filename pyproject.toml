@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "research-analysis-suite"
+version = "0.1.0"
+description = "A modern research toolkit powered by AI, LLMs, and statistical analysis."
+authors = ["Cristian Restrepo"]
+readme = "README.md"
+packages = [
+    { include = "research_methods" },
+    { include = "utils" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.3"
+openai = "^1.73.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.2.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+pandas = "^2.2.3"
+openai = "^1.73.0"
+
+[tool.flake8]
+max-line-length = 100
